@@ -1031,6 +1031,7 @@ class GPTNeoXModel(GPTNeoXPreTrainedModel):
             sequence_length=sequence_length,
             target_length=target_length,
             dtype=dtype,
+            min_dtype=torch.finfo(dtype).min,
             device=device,
             cache_position=cache_position,
             batch_size=input_tensor.shape[0],
